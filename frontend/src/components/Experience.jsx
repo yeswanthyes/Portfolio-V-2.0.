@@ -12,7 +12,7 @@ const Experience = () => {
       location: 'Remote',
       role: 'Web Developer',
       period: 'Jan 2026 – Mar 2026',
-      type: 'Internship',
+      type: 'Intern',
       logo: '/amdox.png',
       skills: ['JavaScript', 'MongoDB', 'Express', 'Redux', 'REST APIs']
     },
