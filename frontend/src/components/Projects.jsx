@@ -60,7 +60,10 @@ const Projects = () => {
       {/* Featured Project - Antares */}
       <div
         className={`featured-project-card ${activeProjectId === 'antares' ? 'active-glow' : ''}`}
-        onClick={() => handleCardClick('antares')}
+        onClick={() => {
+          handleCardClick('antares');
+          window.open('https://antares-web.vercel.app/', '_blank');
+        }}
         style={{
           cursor: 'pointer',
           '--glow-color': 'rgba(234, 166, 70, 0.5)',
@@ -101,7 +104,13 @@ const Projects = () => {
                 <i className="fas fa-lock"></i>
               </div>
               <p className="visual-text">Sealed untill opened</p>
-              <a href="#" className="visit-btn-amber">
+              <a 
+                href="https://antares-web.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="visit-btn-amber"
+                onClick={(e) => e.stopPropagation()}
+              >
                 Visit Project <i className="fas fa-external-link-alt"></i>
               </a>
             </div>
