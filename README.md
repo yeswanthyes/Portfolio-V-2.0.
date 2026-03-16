@@ -76,7 +76,7 @@ npm run dev
 ```
 
 ## 📧 Contact
-For any queries, feel free to reach out via the contact form on the portfolio or email me at [your-email@example.com].
+For any queries, feel free to reach out via the contact form on the portfolio or email me at [yesyeswanth232@gmail.com].
 
 ---
 *Created with ❤️ by Yeswanth*
