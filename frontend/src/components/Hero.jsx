@@ -11,7 +11,7 @@ const Hero = () => {
         </p>
         <div className="cta-buttons">
           <a href="#projects" className="btn primary">View Projects</a>
-          <a href="#contact" className="btn secondary">Contact Me</a>
+          <a href="/YESWANTH_S_Resume.pdf" download="YESWANTH_S_Resume.pdf" className="btn download-btn"><i className="fas fa-download"></i> Download Resume</a>
         </div>
         <div className="social-links">
           <a href="https://github.com/yeswanthyes" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>

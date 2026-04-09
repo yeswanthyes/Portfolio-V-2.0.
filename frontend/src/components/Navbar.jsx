@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Navbar = () => {
+const Navbar = ({ isDark, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -22,10 +22,22 @@ const Navbar = () => {
         <li><a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a></li>
         <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
         <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
-        <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
       </ul>
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        <i className="fas fa-bars"></i>
+      <div className="navbar-right">
+        <button
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+          title={isDark ? 'Light Mode' : 'Dark Mode'}
+        >
+          {isDark
+            ? <i className="fas fa-sun"></i>
+            : <i className="fas fa-moon"></i>
+          }
+        </button>
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          <i className="fas fa-bars"></i>
+        </div>
       </div>
     </nav>
   );
