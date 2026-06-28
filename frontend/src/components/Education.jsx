@@ -1,32 +1,47 @@
 import React from 'react';
+import SectionBg from './SectionBg';
 
-const Education = () => {
-  return (
-    <section id="education" className="education">
-      <div className="section-header">
-        <span className="section-tag">ACADEMIC</span>
-        <h2>Education</h2>
+const Education = () => (
+  <section id="education">
+    <SectionBg variant="education" />
+    <div className="section">
+      <div className="reveal">
+        <div className="section-tag" style={{ color: 'var(--cyan)' }}>02 // EDUCATION</div>
+        <h2 className="section-title">EDUCA<span>TION</span></h2>
+        <div className="section-id" style={{ color: 'rgba(255, 255, 255, 0.4)' }}>ACADEMIC_RECORD::COMPILE_SUCCESSFUL</div>
       </div>
-      <div className="skills-container">
-        <div className="skill-category education-box" style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
-          <img 
-            src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://erode-sengunthar.ac.in/&size=128" 
-            alt="ESEC Logo" 
-            style={{ width: '50px', height: '50px', borderRadius: '8px', background: 'white', padding: '2px', objectFit: 'contain' }}
+
+      <div className="ang-card clip edu-card reveal d1" style={{ background: 'rgba(10, 10, 12, 0.9)', borderColor: 'rgba(255, 255, 255, 0.08)' }}>
+        <div className="br-tr" style={{ borderColor: 'var(--cyan)' }} />
+        <div className="br-bl" style={{ borderColor: 'var(--cyan)' }} />
+        <div className="edu-logo" style={{ borderColor: 'rgba(255, 255, 255, 0.15)', background: '#fff' }}>
+          <img
+            src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://erode-sengunthar.ac.in/&size=128"
+            alt="ESEC"
           />
-          <div>
-            <h3 style={{ marginBottom: '0.5rem' }}>
-              <i className="fas fa-graduation-cap"></i> BE - Computer Science and Engineering
-            </h3>
-            <p style={{ color: 'var(--text-secondary)', marginBottom: '8px', fontSize: '0.95rem' }}>
-              Erode Sengunthar Engineering College
-            </p>
-            <span className="featured-badge">May 2026</span>
-          </div>
+        </div>
+        <div>
+          <div className="edu-degree" style={{ fontFamily: 'var(--font-hud)', fontSize: '1rem', fontWeight: 700 }}>BE — Computer Science &amp; Engineering</div>
+          <div className="edu-school" style={{ color: 'var(--cyan)', fontFamily: 'var(--font-body)', fontSize: '0.85rem' }}>Erode Sengunthar Engineering College</div>
+          <span className="edu-pill" style={{ color: 'var(--cyan)', borderColor: 'rgba(255, 255, 255, 0.25)', background: 'rgba(255, 255, 255, 0.03)' }}><i className="fas fa-graduation-cap" style={{ marginRight: 5 }} /> GRADUATING MAY 2026</span>
         </div>
       </div>
-    </section>
-  );
-};
+
+      <div className="ang-card courses-panel reveal d2" style={{ marginTop: '2px', background: 'rgba(10, 10, 12, 0.9)', borderColor: 'rgba(255, 255, 255, 0.08)' }}>
+        <div className="courses-label" style={{ color: 'var(--cyan)' }}>// CORE ACADEMIC COURSES</div>
+        <div className="courses-wrap">
+          {[
+            'Data Structures & Algorithms', 'Operating Systems',
+            'Computer Networks', 'Database Management',
+            'Machine Learning', 'Cloud Computing',
+            'Cryptography & Security', 'Software Engineering',
+          ].map(c => (
+            <span key={c} className="course-tag" style={{ borderColor: 'rgba(255, 255, 255, 0.08)', color: 'rgba(255, 255, 255, 0.7)' }}>{c}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 export default Education;
